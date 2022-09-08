@@ -12,4 +12,11 @@ export default class ParentLWC extends LightningElement {
         this.countValue++;
     }
 
+    handleMultiply(event){
+        const multiplyingNumber = event.detail;
+        alert("multiplyingNumber" +multiplyingNumber);
+
+        this.countValue *= multiplyingNumber;
+    }
+
 }

@@ -10,4 +10,13 @@ export default class ChildAshu extends LightningElement {
     handleAdd(){
         this.dispatchEvent(new CustomEvent('add'));
     }
+
+    handleMultiply(event){
+        const valueForMultiply = event.target.value;
+        alert("valueForMultiply:" +valueForMultiply)
+
+        this.dispatchEvent(new customElements('multiply' , {
+            detail : valueForMultiply
+        }))
+    }
 }
